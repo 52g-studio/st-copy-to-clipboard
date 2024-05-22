@@ -1,10 +1,15 @@
 body,
 html {
   margin: 0;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
 }
 
 .st-copy-to-clipboard-btn {
-  display: inline-flex;
+  display: inline;
   -moz-box-align: center;
   align-items: center;
   -moz-box-pack: center;

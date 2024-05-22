@@ -15,20 +15,17 @@ function sendValue(value) {
 function onRender(event) {
   // Only run the render code the first time the component is loaded.
   if (!window.rendered) {
-    const { text, before_copy_label, after_copy_label, show_text } =
-      event.detail.args;
+    const { text } = event.detail.args;
 
-    const container = document.querySelector("#container");
     const button = document.querySelector("#copy-button");
 
     function copyToClipboard() {
       navigator.clipboard.writeText(text);
-
-      button.textContent = after_copy_label; // Change label after copying
+      button.textContent = "복사하기"; // Change label after copying
 
       setTimeout(() => {
         if (!button) return;
-        button.textContent = before_copy_label; // Revert to original label after 1 second
+        button.textContent = "복사하기"; // Revert to original label after 1 second
       }, 1000);
     }
 
