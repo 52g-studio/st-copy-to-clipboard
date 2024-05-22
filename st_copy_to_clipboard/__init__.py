@@ -7,15 +7,13 @@ import streamlit.components.v1 as components
 # Tell streamlit that there is a component called streamlit_copy_to_clipboard,
 # and that the code to display that component is in the "frontend" folder
 frontend_dir = (Path(__file__).parent / "frontend").absolute()
-_component_func = components.declare_component(
-    "streamlit_copy_to_clipboard", path=str(frontend_dir)
-)
+_component_func = components.declare_component("streamlit_copy_to_clipboard", path=str(frontend_dir))
 
 
 def st_copy_to_clipboard(
     text: str,
-    before_copy_label: str = "📋",
-    after_copy_label: str = "✅",
+    before_copy_label: str = "복사하기",
+    after_copy_label: str = "복사하기",
     show_text: bool = False,
     key: Optional[str] = None,
 ):
@@ -52,8 +50,6 @@ def main():
     st_copy_to_clipboard(text)
     st_copy_to_clipboard(text, before_copy_label='📋Push to copy', after_copy_label='✅Text copied!')
     st_copy_to_clipboard(text, before_copy_label='Push to copy', after_copy_label='Text copied!', show_text=True)
-
-
 
 
 if __name__ == "__main__":
