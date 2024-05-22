@@ -21,7 +21,7 @@ html {
   margin: 0px;
   line-height: 1.6;
   color: inherit;
-  width: auto;
+  text-align: center;
   user-select: none;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgba(49, 51, 63, 0.2);
