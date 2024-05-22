@@ -21,16 +21,20 @@ function onRender(event) {
 
     function copyToClipboard() {
       navigator.clipboard.writeText(text);
-      button.textContent = "복사하기"; // Change label after copying
+      button.textContent = "클립보드에 복사되었습니다"; // Change label after copying
+      button.style.color = "rgb(23, 114, 51)";
+      button.style.backgroundColor = "#d4edda";
 
       setTimeout(() => {
         if (!button) return;
         button.textContent = "복사하기"; // Revert to original label after 1 second
+        button.style.color = "inherit";
+        button.style.backgroundColor = "transparent";
       }, 1000);
     }
 
     button.addEventListener("click", copyToClipboard);
-
+    Streamlit.setComponentValue(true);
     window.rendered = true;
   }
 }
