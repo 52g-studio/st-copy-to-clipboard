@@ -1,3 +1,8 @@
+body,
+html {
+  margin: 0;
+}
+
 .st-copy-to-clipboard-btn {
   display: inline-flex;
   -moz-box-align: center;
@@ -5,7 +10,7 @@
   -moz-box-pack: center;
   justify-content: center;
   font-weight: 400;
-  padding: 0.25rem 0.75rem;
+  width: 100%;
   border-radius: 0.5rem;
   min-height: 38.4px;
   margin: 0px;
